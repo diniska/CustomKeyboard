@@ -317,7 +317,27 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
 }
 
 - (void)didPressButton:(UILabel *)button {
-	[self.textInput insertText:[button.text copy]];
+    NSString *const text = [button.text copy];
+    
+    id const input = self.textInput;
+    if ([input respondsToSelector:@selector(shouldChangeTextInRange:replacementText:)]) {
+        if ([input shouldChangeTextInRange:[input selectedTextRange] replacementText:text]) {
+            [input insertText:text];
+        }
+    } else if ([input isKindOfClass:[UITextField class]]) {
+        NSRange range = [self selectedRangeInTextField:input];
+        if ([[input delegate] textField:input shouldChangeCharactersInRange:range replacementString:text]) {
+            [input insertText:text];
+        }
+    } else if ([input isKindOfClass:[UITextView class]]) {
+        NSRange range = [self selectedRangeInTextField:input];
+        if ([[input delegate] textView:input shouldChangeTextInRange:range replacementText:text]) {
+            [input insertText:text];
+        }
+    } else {
+        [self.textInput insertText:text];
+    }
+    
     [self sendNotificationAboutTextChanging];
 }
 
@@ -338,4 +358,14 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
 		[[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textInput];
     }
 }
+
+- (NSRange)selectedRangeInTextField:(id<UITextInput>)textField {
+    UITextRange *tr = [textField selectedTextRange];
+    
+    NSInteger spos = [textField offsetFromPosition:textField.beginningOfDocument toPosition:tr.start];
+    NSInteger epos = [textField offsetFromPosition:textField.beginningOfDocument toPosition:tr.end];
+    
+    return NSMakeRange(spos, epos - spos);
+}
+
 @end
