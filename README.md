@@ -18,8 +18,6 @@ The result is:
 ![image alt][1]
 
 
-  [1]: https://github.com/diniska/CustomKeyboard/blob/master/Examples/numbers_grid_keyboard_example.png
-
 You can use any characters or strings to put them on keyboard. Also you can layout them as you want. For example there is another object **DCustomLinesKeyboard**
 
     DCustomLinesKeyboard *keyboard = [[DCustomLinesKeyboard alloc] initWithCharactersLines:@[
@@ -29,12 +27,13 @@ You can use any characters or strings to put them on keyboard. Also you can layo
                                                                                    @[kDCustomAbstractKeyboardEmptyCharacter, kDCustomAbstractKeyboardEmptyCharacter, kDCustomAbstractKeyboardBackSpaceCharacter]]];
 
 The result is:
-![image alt][1]
+![image alt][2]
 
-
-  [1]: https://github.com/diniska/CustomKeyboard/blob/master/Examples/characters_grid_keyboard_example.png
-
-Use constants
+Use constants 
 
  - **kDCustomAbstractKeyboardBackSpaceCharacter** - to place backspace
  - **kDCustomAbstractKeyboardEmptyCharacter** - to place empty placeholder
+
+
+  [1]: https://raw.githubusercontent.com/diniska/CustomKeyboard/master/Examples/numbers_grid_keyboard_example.png
+  [2]: https://raw.githubusercontent.com/diniska/CustomKeyboard/master/Examples/characters_grid_keyboard_example.png
