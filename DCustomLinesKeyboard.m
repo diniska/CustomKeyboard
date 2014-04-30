@@ -3,7 +3,7 @@
 //  Scout
 //
 //  Created by Denis Chaschin on 30.04.14.
-//  Copyright (c) 2014 RSA LLC. All rights reserved.
+//  Copyright (c) 2014 diniska. All rights reserved.
 //
 
 #import "DCustomLinesKeyboard.h"
