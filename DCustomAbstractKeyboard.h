@@ -11,11 +11,11 @@
 extern NSString *const kDCustomAbstractKeyboardEmptyCharacter;
 extern NSString *const kDCustomAbstractKeyboardBackSpaceCharacter;
 
-@protocol DCustomGridKeyboardButtonStyle;
+@protocol DCustomKeyboardButtonStyle;
 
 @interface DCustomAbstractKeyboard : UIView <UIInputViewAudioFeedback>
 - (void)applyKeyboardToTextInput:(id<UITextInput>)textInput;
 
-@property (strong, nonatomic) id<DCustomGridKeyboardButtonStyle> style;
-@property (strong, nonatomic) id<DCustomGridKeyboardButtonStyle> highlightedStyle;
+@property (strong, nonatomic) id<DCustomKeyboardButtonStyle> style;
+@property (strong, nonatomic) id<DCustomKeyboardButtonStyle> highlightedStyle;
 @end

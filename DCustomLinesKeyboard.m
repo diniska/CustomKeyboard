@@ -1,50 +1,34 @@
 //
-//  DCustomGridKeyboard.m
+//  DCustomLinesKeyboard.m
 //  Scout
 //
 //  Created by Denis Chaschin on 30.04.14.
 //  Copyright (c) 2014 RSA LLC. All rights reserved.
 //
 
-#import "DCustomGridKeyboard.h"
+#import "DCustomLinesKeyboard.h"
 #import "DCustomAbstractKeyboard_Protected.h"
 #import "DCustomKeyboardButtonStyle.h"
 
-@interface DCustomGridKeyboard()
+@implementation DCustomLinesKeyboard
 
-@end
-
-@implementation DCustomGridKeyboard
-
-- (id)initWithCharacters:(NSArray *)array {
-
-	if (self = [super init]) {
-        [self createButtonsWithCharachters:array];
+- (id)initWithCharactersLines:(NSArray *)array {
+    if (self = [super init]) {
+        [self createButtonsWithCharachtersLines:array];
     }
     return self;
 }
 
 #pragma mark - Private
-- (void)createButtonsWithCharachters:(NSArray *)characters2DArray {
+- (void)createButtonsWithCharachtersLines:(NSArray *)characters2DArray {
     const NSUInteger numberOfLines = characters2DArray.count;
-    NSUInteger numberOfRows = 0;
-    for (NSArray *line in characters2DArray) {
-        numberOfRows = MAX(line.count, numberOfRows);
-    }
-    
-    if (numberOfRows == 0) {
-        numberOfRows = 1;
-    }
     
     const CGFloat separatorWidth = 1 / [UIScreen mainScreen].scale;
     const CGFloat separatorHeight = separatorWidth;
     
     const CGFloat fullWidth = self.bounds.size.width;
     const CGFloat fullHeight = self.bounds.size.height;
-    const CGFloat buttonWidth = (fullWidth - separatorWidth * (numberOfRows - 2)) / numberOfRows;
-    const CGFloat buttonHeight = (fullHeight - separatorHeight * (numberOfLines - 2)) / numberOfLines;
-
-    NSAssert(buttonWidth > 0, @"unsupported button width");
+    const CGFloat buttonHeight = (fullHeight - separatorHeight * (numberOfLines - 2))/ numberOfLines;
     NSAssert(buttonHeight > 0, @"unsupported button height");
     
     UIView *previousTopButton;
@@ -58,7 +42,8 @@
     id<DCustomKeyboardButtonStyle> style = self.style;
     
     for (NSArray *line in characters2DArray) {
-
+        const CGFloat buttonWidth = (fullWidth - separatorWidth * (line.count - 2)) / line.count;
+        NSAssert(buttonWidth > 0, @"unsupported button width");
         
         for (NSString *buttonTitle in line) {
             UIView *button;

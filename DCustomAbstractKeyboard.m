@@ -8,8 +8,8 @@
 
 #import "DCustomAbstractKeyboard.h"
 #import "DCustomAbstractKeyboard_Protected.h"
-#import "DCustomGridKeyboardButtonStyleIOS7.h"
-#import "DCustomGridKeyboardButtonStyleIOS7Highlighted.h"
+#import "DCustomKeyboardButtonStyleIOS7.h"
+#import "DCustomKeyboardButtonStyleIOS7Highlighted.h"
 
 NSString *const kDCustomAbstractKeyboardEmptyCharacter = @"empty";
 NSString *const kDCustomAbstractKeyboardBackSpaceCharacter = @"delete";
@@ -203,11 +203,11 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
 
 - (void)setupDefaultStyles {
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        _style = [[DCustomGridKeyboardButtonStyleIOS7 alloc] init];
-        _highlightedStyle = [[DCustomGridKeyboardButtonStyleIOS7Highlighted alloc] init];
+        _style = [[DCustomKeyboardButtonStyleIOS7 alloc] init];
+        _highlightedStyle = [[DCustomKeyboardButtonStyleIOS7Highlighted alloc] init];
     } else {
-        _style = [[DCustomGridKeyboardButtonStyleIOS7 alloc] init];
-        _highlightedStyle = [[DCustomGridKeyboardButtonStyleIOS7Highlighted alloc] init];
+        _style = [[DCustomKeyboardButtonStyleIOS7 alloc] init];
+        _highlightedStyle = [[DCustomKeyboardButtonStyleIOS7Highlighted alloc] init];
     }
 }
 

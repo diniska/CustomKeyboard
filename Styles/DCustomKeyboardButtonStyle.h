@@ -1,5 +1,5 @@
 //
-//  DCustomGridKeyboardButtonStyle.h
+//  DCustomKeyboardButtonStyle.h
 //  Scout
 //
 //  Created by Denis Chaschin on 30.04.14.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DCustomGridKeyboardButtonStyle <NSObject>
+@protocol DCustomKeyboardButtonStyle<NSObject>
 - (void)applyToCharacterLabel:(UILabel *)label;
 - (void)applyToBackspace:(UIImageView *)backspaceImage;
 - (void)applyToEmptyButton:(UIView *)emptyButton;

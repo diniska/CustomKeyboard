@@ -1,15 +1,15 @@
 //
-//  DCustomGridKeyboardButtonStyleIOS7Highlighted.m
+//  DCustomKeyboardButtonStyleIOS7Highlighted.m
 //  Scout
 //
 //  Created by Denis Chaschin on 30.04.14.
 //  Copyright (c) 2014 RSA LLC. All rights reserved.
 //
 
-#import "DCustomGridKeyboardButtonStyleIOS7Highlighted.h"
+#import "DCustomKeyboardButtonStyleIOS7Highlighted.h"
 
 
-@implementation DCustomGridKeyboardButtonStyleIOS7Highlighted
+@implementation DCustomKeyboardButtonStyleIOS7Highlighted
 - (void)applyToCharacterLabel:(UILabel *)label {
     label.backgroundColor = [UIColor colorWithRed:188/255.f green:192/255.f blue:196/255.f alpha:1];
     label.textColor = [UIColor blackColor];

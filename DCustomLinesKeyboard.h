@@ -1,5 +1,5 @@
 //
-//  DCustomGridKeyboard.h
+//  DCustomLinesKeyboard.h
 //  Scout
 //
 //  Created by Denis Chaschin on 30.04.14.
@@ -8,11 +8,10 @@
 
 #import "DCustomAbstractKeyboard.h"
 
-@interface DCustomGridKeyboard : DCustomAbstractKeyboard <UIInputViewAudioFeedback>
+@interface DCustomLinesKeyboard : DCustomAbstractKeyboard
 /**
- * The buttons will be placed by grid.
+ * The buttons will be splitted to lines. Each button on line will have the same width
  * @param array 2D array of strings to use a keyboard symbols
  */
-- (id)initWithCharacters:(NSArray *)array;
-
+- (id)initWithCharactersLines:(NSArray *)array;
 @end
