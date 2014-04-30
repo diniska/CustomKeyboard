@@ -1,5 +1,5 @@
 //
-//  DCustomGridKeyboardButtonStyleIOS6.h
+//  DCustomGridKeyboardButtonStyleIOS7.h
 //  Scout
 //
 //  Created by Denis Chaschin on 30.04.14.
@@ -10,5 +10,5 @@
 
 #import "DCustomGridKeyboardButtonStyle.h"
 
-@interface DCustomGridKeyboardButtonStyleIOS6 : NSObject <DCustomGridKeyboardButtonStyle>
+@interface DCustomGridKeyboardButtonStyleIOS7 : NSObject <DCustomGridKeyboardButtonStyle>
 @end

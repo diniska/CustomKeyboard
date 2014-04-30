@@ -12,4 +12,6 @@
 - (void)applyToCharacterLabel:(UILabel *)label;
 - (void)applyToBackspace:(UIImageView *)backspaceImage;
 - (void)applyToEmptyButton:(UIView *)emptyButton;
+@optional
+- (void)applyToBackgroundView:(UIView *)backgroundView;
 @end
