@@ -21,7 +21,6 @@ DCustomGridKeyboard *keyboard = [[DCustomGridKeyboard alloc] initWithCharacters:
                                                                                  @[@"7", @"8", @"9"],
                                                                                  @[kDCustomAbstractKeyboardEmptyCharacter, @"0", kDCustomAbstractKeyboardBackSpaceCharacter]]];
 [keyboard applyKeyboardToTextInput:textField];
-@end
 ```
 
 The result is:
@@ -35,7 +34,6 @@ DCustomLinesKeyboard *keyboard = [[DCustomLinesKeyboard alloc] initWithCharacter
                                                                                    @[@"М", @"Н", @"О", @"Р"],
                                                                                    @[@"С", @"Т", @"У", @"Х"],
                                                                                    @[kDCustomAbstractKeyboardEmptyCharacter, kDCustomAbstractKeyboardEmptyCharacter, kDCustomAbstractKeyboardBackSpaceCharacter]]];
-@end
 ```
 
 The result is:
