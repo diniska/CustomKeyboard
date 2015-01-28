@@ -1,0 +1,5 @@
+language: objective-c
+
+xcode_project: Examples/CustomKeyboardExample/CustomKeyboardExample.xcodeproj # path to your xcodeproj folder
+xcode_scheme: CustomKeyboardExample
+xcode_sdk: iphonesimulator

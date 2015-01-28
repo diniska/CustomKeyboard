@@ -137,12 +137,14 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
         }
     } else if ([input isKindOfClass:[UITextField class]]) {
         NSRange range = [self selectedRangeInTextField:input];
-        if ([[input delegate] textField:input shouldChangeCharactersInRange:range replacementString:text]) {
+        id<UITextFieldDelegate> delegate = [(UITextField *)input delegate];
+        if (delegate == nil || [delegate textField:input shouldChangeCharactersInRange:range replacementString:text]) {
             [input insertText:text];
         }
     } else if ([input isKindOfClass:[UITextView class]]) {
         NSRange range = [self selectedRangeInTextField:input];
-        if ([[input delegate] textView:input shouldChangeTextInRange:range replacementText:text]) {
+        id<UITextViewDelegate> delegate = [(UITextView *)input delegate];
+        if (delegate == nil || [delegate textView:input shouldChangeTextInRange:range replacementText:text]) {
             [input insertText:text];
         }
     } else {
@@ -173,7 +175,8 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
                 range.length = 1;
             }
         }
-        if ([[input delegate] textField:input shouldChangeCharactersInRange:range replacementString:@""]) {
+        id<UITextFieldDelegate> delegate = [(UITextField *)input delegate];
+        if (delegate == nil || [delegate textField:input shouldChangeCharactersInRange:range replacementString:@""]) {
             [input deleteBackward];
         }
     } else if ([input isKindOfClass:[UITextView class]]) {
@@ -184,7 +187,8 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
                 range.length = 1;
             }
         }
-        if ([[input delegate] textView:input shouldChangeTextInRange:range replacementText:@""]) {
+        id<UITextViewDelegate> delegate = [(UITextView *)input delegate];
+        if (delegate == nil || [delegate textView:input shouldChangeTextInRange:range replacementText:@""]) {
             [input deleteBackward];
         }
     } else {

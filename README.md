@@ -1,30 +1,42 @@
 CustomKeyboard
 ==============
+[![CI Status](http://img.shields.io/travis/diniska/CustomKeyboard.svg?style=flat)](https://travis-ci.org/diniska/CustomKeyboard)
 
-Cusomizable default iOS keyboard
+Customizable default iOS keyboard
 
-How to use:
+
+## Installation
+The easiest way is to use [CocoaPods](http://cocoapods.org). It takes care of all required frameworks and third party dependencies:
+```ruby
+pod 'DCustomKeyboard', '~> 0.0'
+```
+
+## Usage example
 
 To add **keyboard** to your **UITextView** or **UITextField** use next code
-
-    DCustomGridKeyboard *keyboard = [[DCustomGridKeyboard alloc] initWithCharacters:@[
+```objective-c
+DCustomGridKeyboard *keyboard = [[DCustomGridKeyboard alloc] initWithCharacters:@[
                                                                                  @[@"1", @"2", @"3"],
                                                                                  @[@"4", @"5", @"6"],
                                                                                  @[@"7", @"8", @"9"],
                                                                                  @[kDCustomAbstractKeyboardEmptyCharacter, @"0", kDCustomAbstractKeyboardBackSpaceCharacter]]];
-    [keyboard applyKeyboardToTextInput:textField];
+[keyboard applyKeyboardToTextInput:textField];
+@end
+```
 
 The result is:
 ![image alt][1]
 
 
 You can use any characters or strings to put them on keyboard. Also you can layout them as you want. For example there is another object **DCustomLinesKeyboard**
-
-    DCustomLinesKeyboard *keyboard = [[DCustomLinesKeyboard alloc] initWithCharactersLines:@[
+```objective-c
+DCustomLinesKeyboard *keyboard = [[DCustomLinesKeyboard alloc] initWithCharactersLines:@[
                                                                                    @[@"А", @"В", @"Е", @"К"],
                                                                                    @[@"М", @"Н", @"О", @"Р"],
                                                                                    @[@"С", @"Т", @"У", @"Х"],
                                                                                    @[kDCustomAbstractKeyboardEmptyCharacter, kDCustomAbstractKeyboardEmptyCharacter, kDCustomAbstractKeyboardBackSpaceCharacter]]];
+@end
+```
 
 The result is:
 ![image alt][2]
