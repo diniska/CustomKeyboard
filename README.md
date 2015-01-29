@@ -1,7 +1,7 @@
 CustomKeyboard
 ==============
 [![CI Status](http://img.shields.io/travis/diniska/CustomKeyboard.svg?style=flat)](https://travis-ci.org/diniska/CustomKeyboard)
-[![Version](https://img.shields.io/cocoapods/v/CustomKeyboard.svg?style=flat)](http://cocoadocs.org/docsets/CustomKeyboard)
+[![Version](https://img.shields.io/cocoapods/v/DCustomKeyboard.svg?style=flat)](http://cocoadocs.org/docsets/DCustomKeyboard)
 
 Customizable default iOS keyboard
 
