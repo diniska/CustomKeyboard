@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 diniska All rights reserved.
 //
 
-#import "DCustomAbstractKeyboard.h"
+#import "DCustomGridKeyboard.h"
 
-@interface DCustomLinesKeyboard : DCustomAbstractKeyboard
+typedef DCustomGridKeyboard DCustomLinesKeyboard;
+
+@interface DCustomGridKeyboard (DCustomLinesKeyboardOldApiCompatibility)
 /**
  * The buttons will be splitted to lines. Each button on line will have the same width
  * @param array 2D array of strings to use a keyboard symbols
