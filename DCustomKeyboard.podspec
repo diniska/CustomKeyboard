@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DCustomKeyboard"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Customizable default iOS keyboard."
 
   s.description  = <<-DESC
@@ -76,7 +76,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/diniska/CustomKeyboard.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/diniska/CustomKeyboard.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
