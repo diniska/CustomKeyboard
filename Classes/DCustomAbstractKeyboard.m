@@ -8,8 +8,8 @@
 
 #import "DCustomAbstractKeyboard.h"
 #import "DCustomAbstractKeyboard_Protected.h"
-#import "DCustomKeyboardButtonStyleIOS7.h"
-#import "DCustomKeyboardButtonStyleIOS7Highlighted.h"
+#import "Styles/DCustomKeyboardButtonStyleIOS7.h"
+#import "Styles/DCustomKeyboardButtonStyleIOS7Highlighted.h"
 
 NSString *const kDCustomAbstractKeyboardEmptyCharacter = @"empty";
 NSString *const kDCustomAbstractKeyboardBackSpaceCharacter = @"delete";

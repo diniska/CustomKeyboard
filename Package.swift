@@ -16,10 +16,12 @@ let package = Package(
         .target(
             name: "CustomKeyboard",
             dependencies: [],
+            path: "Classes",
             resources: [
-                .copy("Resources/backspace_ios7_icon.png"),
-                .copy("Resources/backspace_ios7_icon@2x.png"),
-                .copy("Resources/backspace_ios7_icon@3x.png"),
-            ]),
+                .copy("../Resources/backspace_ios7_icon.png"),
+                .copy("../Resources/backspace_ios7_icon@2x.png"),
+                .copy("../Resources/backspace_ios7_icon@3x.png"),
+            ],
+            publicHeadersPath: "."),
     ]
 )

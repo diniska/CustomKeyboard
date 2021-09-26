@@ -8,7 +8,7 @@
 
 #import "DCustomGridKeyboard.h"
 #import "DCustomAbstractKeyboard_Protected.h"
-#import "DCustomKeyboardButtonStyle.h"
+#import "Styles/DCustomKeyboardButtonStyle.h"
 
 @interface DCustomGridKeyboard()
 
