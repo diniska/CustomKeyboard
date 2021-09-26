@@ -4,10 +4,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "CustomKeyboard",
+    name: "DCustomKeyboard",
     products: [
         .library(
-            name: "CustomKeyboard",
+            name: "DCustomKeyboard",
             targets: ["CustomKeyboard"]),
     ],
     dependencies: [
