@@ -87,10 +87,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.source_files  = "Sources/CustomKeyboard", "Sources/CustomKeyboard/**/*.{h,m}"
   s.exclude_files = "Examples"
 
-  # s.public_header_files = "Classes/**/*.h"
+  # s.public_header_files = "Sources/CustomKeyboard/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -102,7 +102,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "Resources/*.png"
+  s.resources = "Sources/CustomKeyboard/Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

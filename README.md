@@ -7,6 +7,14 @@ Customizable default iOS keyboard
 
 
 ## Installation
+
+### SwiftPM
+
+Add a SwiftPM dependency to your project: `https://github.com/diniska/CustomKeyboard`.
+
+
+### Cocoapods
+
 The easiest way is to use [CocoaPods](http://cocoapods.org). It takes care of all required frameworks and third party dependencies:
 ```ruby
 pod 'DCustomKeyboard', '~> 0.0'
