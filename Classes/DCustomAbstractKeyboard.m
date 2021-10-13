@@ -126,8 +126,10 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
 
 #pragma mark - Button events
 - (void)didPressButton:(UILabel *)button {
-    NSString *const text = [button.text copy];
-    
+    [self didPressButtonWithText:[button.text copy]];
+}
+
+- (void)didPressButtonWithText:(NSString *)text {
     id const input = self.textInput;
     
     //code from http://stackoverflow.com/questions/13205160/how-do-i-retrieve-keystrokes-from-a-custom-keyboard-on-an-ios-app/13205494#13205494
@@ -232,7 +234,8 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
     // check others buttons
     if (!wasFounded) {
         for (UILabel *label in self.buttons) {
-            if (CGRectContainsPoint(label.frame, location)) {
+            const CGRect convertedLabelFrame = [self convertRect:label.frame fromView:label.superview];
+            if (CGRectContainsPoint(convertedLabelFrame, location)) {
                 wasFounded = YES;
                 self.highlightedButton = label;
                 self.highlightedEmptyButton = nil;
