@@ -15,6 +15,7 @@ extern NSString *const kDCustomAbstractKeyboardBackSpaceCharacter;
 
 @interface DCustomAbstractKeyboard : UIView <UIInputViewAudioFeedback>
 - (void)applyKeyboardToTextInput:(id<UITextInput>)textInput;
+- (instancetype)init;
 
 @property (strong, nonatomic) id<DCustomKeyboardButtonStyle> style;
 @property (strong, nonatomic) id<DCustomKeyboardButtonStyle> highlightedStyle;

@@ -20,6 +20,7 @@
 
 #pragma mark - Button events Override if need
 - (void)didPressButton:(UILabel *)button;
+- (void)didPressButtonWithText:(NSString *)text;
 - (void)didPressBackspace:(UIImageView *)backspace;
 - (void)didPressEmptyButton:(UIView *)emptyButton;
 @end
