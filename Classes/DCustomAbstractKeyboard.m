@@ -234,8 +234,8 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
     // check others buttons
     if (!wasFounded) {
         for (UILabel *label in self.buttons) {
-            const CGRect convertedLabelFrame = [self convertRect:label.frame fromView:label.superview];
-            if (CGRectContainsPoint(convertedLabelFrame, location)) {
+            const CGRect convertedFrame = [self convertRect:label.frame fromView:label.superview];
+            if (CGRectContainsPoint(convertedFrame, location)) {
                 wasFounded = YES;
                 self.highlightedButton = label;
                 self.highlightedEmptyButton = nil;
@@ -246,7 +246,8 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
     }
     if (!wasFounded) {
         for(UIView *empty in self.emptyButtons) {
-            if (CGRectContainsPoint(empty.frame, location)) {
+            const CGRect convertedFrame = [self convertRect:empty.frame fromView:empty.superview];
+            if (CGRectContainsPoint(convertedFrame, location)) {
                 self.highlightedButton = nil;
                 self.highlightedEmptyButton = empty;
                 self.highlightedBackspace = nil;
@@ -257,7 +258,8 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
     }
     if (!wasFounded) {
         for (UIImageView *backspace in self.backspaces) {
-            if (CGRectContainsPoint(backspace.frame, location)) {
+            const CGRect convertedFrame = [self convertRect:backspace.frame fromView:backspace.superview];
+            if (CGRectContainsPoint(convertedFrame, location)) {
                 self.highlightedButton = nil;
                 self.highlightedEmptyButton = nil;
                 self.highlightedBackspace = backspace;
