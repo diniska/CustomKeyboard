@@ -62,7 +62,9 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
 }
 
 - (void)setHighlightedButton:(UILabel *)highlightedButton {
-    [self.style applyToCharacterLabel:_highlightedButton];
+    if (_highlightedButton) {
+        [self.style applyToCharacterLabel:_highlightedButton];
+    }
     _highlightedButton = highlightedButton;
     if (_highlightedButton) {
         [self.highlightedStyle applyToCharacterLabel:_highlightedButton];
@@ -70,7 +72,9 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
 }
 
 - (void)setHighlightedEmptyButton:(UIView *)highlightedEmptyButton {
-    [self.style applyToEmptyButton:_highlightedEmptyButton];
+    if (_highlightedEmptyButton) {
+        [self.style applyToEmptyButton:_highlightedEmptyButton];
+    }
     _highlightedEmptyButton = highlightedEmptyButton;
     if (_highlightedEmptyButton) {
         [self.highlightedStyle applyToEmptyButton:_highlightedEmptyButton];
@@ -78,7 +82,9 @@ static const NSTimeInterval kHighlightRemovingWhenPressedDuration = .3;
 }
 
 - (void)setHighlightedBackspace:(UIImageView *)highlightedBackspace {
-    [self.style applyToBackspace:_highlightedBackspace];
+    if (_highlightedBackspace) {
+        [self.style applyToBackspace:_highlightedBackspace];
+    }
     _highlightedBackspace = highlightedBackspace;
     if (_highlightedBackspace) {
         [self.highlightedStyle applyToBackspace:_highlightedBackspace];
